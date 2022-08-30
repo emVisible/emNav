@@ -22,6 +22,8 @@
 ![image](https://user-images.githubusercontent.com/93522732/187407049-6f783a43-b636-48ae-92d9-2d499084fc2c.png)
 
 搜索栏使用的是*百度*的接口。你可以在导航中直接按*空格*获取焦点。
+- 顶部大导航格设置为当前页面跳转，其余的所有连接为新页面跳转，你可以自行设置你喜欢的跳转方式
+![image](https://user-images.githubusercontent.com/93522732/187408748-bc615dce-7140-4da2-81ac-7684c4b5cf38.png)
 
 - *我只设置了主窗口格的快捷修改，如果你想修改section顶部导航栏或者左下角的浮动导航栏以及图标，请自行在html文件中修改*
 # 希望帮到了你:)
