@@ -1,0 +1,24 @@
+.negative {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    padding-left: 1%;
+    padding-right: 1%;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: 2s;
+    text-transform: uppercase;
+    transform: rotateY(180deg);
+    /* above are default setting, in the ./CSS/Main标签 */
+
+}
+
+/* these are example for display */
+.negative article {
+    align-self: center;
+    width: 30%;
+    height: 95%;
+    border-radius: 20px;
+    background: #f6e58d;
+    margin: 2%;
+}

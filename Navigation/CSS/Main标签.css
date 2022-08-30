@@ -1,0 +1,37 @@
+main {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+main .positive {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  padding-left: 1%;
+  padding-right: 1%;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: 2s;
+  text-transform: capitalize;
+  transform: rotateY(0deg);
+}
+@media (max-width: 768px) {
+  main .positive {
+    flex-direction: column;
+  }
+}
+main .negative {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  padding-left: 1%;
+  padding-right: 1%;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: 2s;
+  text-transform: uppercase;
+  transform: rotateY(180deg);
+}
