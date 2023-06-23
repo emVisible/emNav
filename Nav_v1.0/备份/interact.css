@@ -1,0 +1,13 @@
+
+@media only screen and (max-width:480px){
+    /*手机*/
+    @import url();
+}
+@media only screen and (max-width:768px){
+    /*平板*/
+    @import url();
+}
+@media only screen and (min-width:960px){
+    /*电脑*/
+    @import url();
+}

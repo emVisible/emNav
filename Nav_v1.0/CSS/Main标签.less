@@ -1,0 +1,223 @@
+main {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    transform-style: preserve-3d;
+    transition: .5s;
+    @media (max-width:768px) {
+    }
+    .positive {
+        display: flex;
+        width: 100vw;
+        height: 80vh;
+        padding-left: 1%;
+        padding-right: 1%;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: 2s;
+        text-transform: capitalize;
+        transform: rotateY(0deg);
+        @media (max-width:768px) {
+            flex-direction: column;
+            // width: 100%;
+            // height: 100%;
+        }
+    }
+
+    .negative {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 80vh;
+        padding-left: 2%;
+        padding-right: 2%;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: 2s;
+        text-transform:capitalize;
+        transform: rotateY(180deg);
+        .main_bar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 10%;
+          margin-bottom: 1%;
+          border-radius: 25px;
+          font-size: 1.6rem;
+          color: #d1d8e0;
+          cursor:default;
+          &::before{
+            content: "Hard choices,Easy life.";
+            position: absolute;
+            transition: 1.5s;
+            opacity: 1;
+          }
+          &::after{
+            content: "Easy Choices,Hard life.";
+            position: absolute;
+            transition: 1.5s;
+            opacity: 0;
+          }
+          &:hover{
+            &::before{
+              opacity: 0;
+
+            }
+            &::after{
+              opacity: 1;
+            }
+          }
+    }
+        .vice_bar{
+          width: 100%;
+          height: 85%;
+          // background-color: white;
+          display: flex;
+
+
+          .left_bar {
+            height: 100%;
+            width: 20%;
+            margin-left: 10px;
+            background: #f7f1e3;
+            border-radius: 25px;
+
+            display: flex;
+            flex-direction: column;
+            div{
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.3rem;
+              background-color:  #cfd9df;
+              transition: .3s;
+              i{
+                transition: .3s;
+              }
+              &:hover{
+                filter: drop-shadow(0 0 1.3rem  #f7b731);
+                transform: scale(1.1);
+              }
+
+              &:first-child{
+                transform: scale(1);
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                &::after{
+                  content: "";
+                  font-size: 1rem;
+                  position: absolute;
+                  @keyframes show {
+                    from{
+                      content: "";
+                      opacity: 0;
+                    }
+                    50%{
+                      content: "天之道";
+                      opacity: 1;
+                    }
+                    75%{
+                      content: "";
+                      opacity: 0;
+                    }
+                    to{
+                      content:"利而不害";
+                      opacity: 1;
+                    }
+                  }
+                }
+                &:hover{
+                  &::after{
+                    // opacity: 1;
+                    animation: show;
+                  animation-duration: 3s;
+                  animation-fill-mode: forwards;
+                  }
+                  i{
+                    opacity: 0;
+                  }
+                }
+              }
+              &:last-child{
+                transform: scale(1);
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+              }
+            }
+          }
+          .right_bar{
+            height: 100%;
+            width: 20%;
+            background: #f7f1e3;
+            border-radius: 25px;
+            margin-right: 10px;
+
+            display: flex;
+            flex-direction: column;
+            div{
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.3rem;
+              background-color:  #cfd9df;
+              transition: .3s;
+
+              &:hover{
+                filter: drop-shadow(0 0 1.3rem  #f7b731);
+                transform: scale(1.1);
+              }
+              &:first-child{
+                transform: scale(1);
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                &::after{
+                  content: "";
+                  font-size: 1rem;
+                  position: absolute;
+                  animation-duration: 3s;
+                  animation-fill-mode: forwards;
+                  @keyframes show2 {
+                    from{
+                      content: "";
+                      opacity: 0;
+                    }
+                    50%{
+                      content: "人之道";
+                      opacity: 1;
+                    }
+                    75%{
+                      content: "";
+                      opacity: 0;
+                    }
+                    to{
+                      content:"为而不争";
+                      opacity: 1;
+                    }
+                  }
+                }
+                &:hover{
+                  &::after{
+                    opacity: 1;
+                    animation-name: show2;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                  }
+                  i{
+                    opacity: 0;
+                  }
+                }
+              }
+              &:last-child{
+                transform: scale(1);
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+              }
+            }
+          }
+        }
+  }
+}

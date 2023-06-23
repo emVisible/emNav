@@ -1,0 +1,25 @@
+#matte {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #353b48;
+  z-index: 100;
+  opacity: 1;
+}
+#matte .welcome_nav {
+  position: absolute;
+  bottom: 6%;
+  right: 10%;
+  font-size: 3rem;
+  color: #f7f1e3;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (max-width: 768px) {
+  #matte .welcome_nav {
+    font-size: 2rem;
+  }
+}
